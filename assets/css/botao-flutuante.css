@@ -1,0 +1,77 @@
+.button-flutuante {
+	display: flex;
+	flex-direction: column-reverse;
+	margin: 0 1rem 1rem auto;
+	width: fit-content;
+}
+
+.button-flutuante label {
+	align-self: flex-end;
+}
+
+.button-style {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 50%;
+	border: none;
+	box-shadow: 0px 4px 16px 0px var(--corBotao2);
+
+	cursor: pointer;
+	background-color: var(--corBotao2);
+}
+
+.button-style i {
+	font-size: 1.5rem;
+	color: var(--corCard);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hidden-buttons {
+	display: none;
+}
+
+.hidden-buttons li {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: 1rem;
+	margin: 1rem 0;
+}
+
+.hidden-buttons li>p {
+	background-color: var(--corCard);
+	border-radius: 1rem;
+	padding: 0.5rem;
+	font-weight: 500;
+	font-size: 0.8rem;
+	box-shadow: 0px 4px 16px 0px var(--corFonteClara);
+}
+
+.show-buttons-checkbox:checked~.hidden-buttons {
+	display: block;
+}
+
+.show-buttons-checkbox {
+	display: none;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+	.button-style {
+		width: 5rem;
+		height: 5rem;
+	}
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+	.button-flutuante {
+		display: none;
+	}
+}

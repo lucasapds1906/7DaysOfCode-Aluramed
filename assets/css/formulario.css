@@ -1,0 +1,95 @@
+.formulario-oculto {
+    display: none;
+}
+
+.agendamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-container {
+    background-color: var(--corCard);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 60vw;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.formulario-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+}
+
+.formulario-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+}
+
+.formulario-grupo {
+    width: 100%;
+    text-align: left;
+}
+
+.formulario-grupo label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--corFonteClara);
+    font-weight: 500;
+}
+
+.formulario-grupo input,
+.formulario-grupo select,
+.formulario-grupo textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--corIcone);
+    border-radius: 8px;
+    background-color: var(--corCard);
+    transition: border-color 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.formulario-grupo input:focus,
+.formulario-grupo select:focus,
+.formulario-grupo textarea:focus {
+    outline: none;
+    border-color: var(--corBotao2);
+}
+
+.formulario-grupo textarea {
+    resize: vertical;
+}
+
+.formulario-botao {
+    margin-top: 2rem;
+    background-color: var(--corBotao2);
+    color: var(--corCard);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.formulario-botao:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    .formulario-oculto {
+        display: block;
+    }
+}

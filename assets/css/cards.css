@@ -1,0 +1,234 @@
+/* TITULOS DAS SEÇÕES */
+.dias {
+    margin-bottom: 5%;
+}
+
+.card__grid {
+    padding: 0.5rem;
+}
+
+.titulos {
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--corCard);
+    border-radius: 0.5rem;
+    padding: 1.3rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CARD PESSOA */
+.card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__pessoa {
+    display: flex;
+}
+
+.card__pessoa span {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* CARD PESSOA CHAT ICONE DIREITA */
+.card__pessoa-chat {
+    background-color: var(--corIcone);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__pessoa-chat i {
+    color: var(--corBotao2);
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+/* CARD PESSOA DESCRICAO */
+.card__pessoa-descricao {
+    margin-left: 1rem;
+}
+
+.card__pessoa-descricao h2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.4rem;
+}
+
+.card__pessoa-descricao p {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    color: var(--corFonteClara);
+}
+
+.card__pessoa-descricao i {
+    font-size: 1rem;
+    margin-right: 0.3rem;
+}
+
+/* LINHA DIVIDINDO O CARD */
+.quebra hr {
+    padding: 0;
+    margin: 0.6rem 0;
+    border: 1px solid var(--corBackground);
+}
+
+/* CARD HORARIOS */
+.card__horario p {
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+
+/* CARD BOTOES */
+.card__horario-botoes {
+    margin-top: 0.8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.card__horario-botoes a {
+    padding: 1rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__esquerda {
+    background-color: var(--corBotao1);
+    color: var(--corCard);
+}
+
+.btn__direita {
+    background-color: transparent;
+    color: var(--corFonteEscura);
+    border: 2px solid var(--corIcone);
+}
+
+.btn__centro {
+    background-color: var(--corBotao2);
+    color: var(--corCard);
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+/* PERFIS */
+
+.luciana-perfil {
+    background-image: url("../images/perfil/luciana.svg");
+}
+
+.larissa-perfil {
+    background-image: url("../images/perfil/larissa.svg");
+}
+
+.marcos-perfil {
+    background-image: url("../images/perfil/marcos.svg");
+}
+
+.clara-perfil {
+    background-image: url("../images/perfil/clara.svg");
+}
+
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    .card__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .dias {
+        margin-bottom: 2%;
+    }
+
+    .titulos,
+    .card__pessoa-chat i,
+    .card__pessoa-descricao i {
+        font-size: 1.2rem;
+    }
+
+    .card__horario-botoes a,
+    .card__horario p,
+    .card__pessoa-descricao p,
+    .card__pessoa-descricao h2 {
+        font-size: 1rem;
+    }
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    .card__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .dias {
+        margin-bottom: 3;
+    }
+
+    .card__horario-botoes a {
+        transition: box-shadow 0.4s ease, filter 0.3s ease;
+    }
+
+    .card__horario-botoes a:hover {
+        filter: brightness(1.1);
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .cards {
+        transition: transform 0.3s ease;
+    }
+
+    .cards:hover {
+        transform: scale(1.1);
+    }
+
+    .card__pessoa-chat {
+        transition: transform 0.3s ease;
+    }
+
+    .card__pessoa-chat:hover {
+        transform: scale(1.2);
+    }
+
+    .titulos,
+    .card__pessoa-chat i,
+    .card__pessoa-descricao i {
+        font-size: 1.5rem;
+    }
+
+    .card__horario-botoes a,
+    .card__horario p,
+    .card__pessoa-descricao p,
+    .card__pessoa-descricao h2 {
+        font-size: 1rem;
+    }
+}

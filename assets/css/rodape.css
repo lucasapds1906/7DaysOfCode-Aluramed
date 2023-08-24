@@ -1,0 +1,138 @@
+.menu {
+	left: 0;
+	width: 100%;
+	background-color: var(--corCard);
+	box-shadow: 0px -8px 12px 0px #0000000F;
+	border-radius: 0.8rem 0.8rem 0 0;
+	padding: 0.7rem 0;
+}
+
+.menu__lista {
+	justify-content: space-around;
+}
+
+.menu__lista,
+.menu__lista-item a {
+	display: flex;
+}
+
+.menu__lista-item a {
+	flex-direction: column;
+	align-items: center;
+
+	text-decoration: none;
+	color: var(--corFonteClara);
+	font-weight: 400;
+	font-size: 0.8rem;
+}
+
+.menu__lista-item i {
+	font-size: 1.5rem;
+	margin-bottom: 0.3rem;
+}
+
+.button-list-style,
+.show-list-checkbox {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.menu__lista {
+		margin: 0 25%;
+		justify-content: space-between;
+	}
+
+	.menu__lista-item a {
+		font-size: 1rem;
+	}
+
+	.menu__lista-item i {
+		font-size: 2rem;
+	}
+
+	.menu {
+		padding: 1rem 0;
+	}
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+	.menu {
+		display: flex;
+		flex-direction: column;
+		padding: 1.5rem;
+	}
+
+	.menu__lista,
+	.menu__lista-item a {
+		display: flex;
+	}
+
+	.menu__lista {
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.menu__lista-item a {
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.3rem 0;
+
+		text-decoration: none;
+		color: var(--corFonteClara);
+		font-weight: 500;
+		font-size: 1rem;
+		transition: color 0.3s ease, transform 0.2s ease;
+	}
+
+	.menu__lista-item a:hover {
+		color: var(--corBotao2);
+		transform: scale(1.1);
+	}
+
+	.menu-bacana {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		box-sizing: border-box;
+		width: fill;
+	}
+
+	.alignlist {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.button-list-style i {
+		font-size: 2rem;
+		color: var(--corBotao1);
+	}
+
+	.button-list-style,
+	.show-list-checkbox {
+		display: block;
+	}
+
+	.button-list-style {
+		width: fit-content;
+		transition: color 0.3s ease, transform 0.2s ease;
+	}
+
+	.button-list-style:hover {
+		transform: scale(1.5);
+	}
+
+	.show-list-checkbox {
+		display: none;
+	}
+
+	.hidden-list {
+		display: none;
+		padding-right: 4rem;
+	}
+
+	.show-list-checkbox:checked~.menu__lista .menu__lista-item a .hidden-list {
+		display: block;
+	}
+}
